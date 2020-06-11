@@ -28,15 +28,9 @@
  </div>
 
  <div class="sidebar-box ftco-animate">
-   <h3>Tag Cloud</h3>
-   <div class="tagcloud">
-     <a href="#" class="tag-cloud-link">cat</a>
-     <a href="#" class="tag-cloud-link">abstract</a>
-     <a href="#" class="tag-cloud-link">people</a>
-     <a href="#" class="tag-cloud-link">person</a>
-     <a href="#" class="tag-cloud-link">model</a>
-     <a href="#" class="tag-cloud-link">delicious</a>
-     <a href="#" class="tag-cloud-link">desserts</a>
-     <a href="#" class="tag-cloud-link">drinks</a>
-   </div>
+   <?php
+     include_once '../app/modeles/tagsModele.php';
+     $tags = \App\Modeles\TagsModele\findAll($connexion);
+     include '../app/vues/tags/index.php';
+    ?>
  </div>

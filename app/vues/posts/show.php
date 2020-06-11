@@ -24,3 +24,9 @@
 
   <!-- AUTHOR DETAILS -->
     <?php include '../app/vues/authors/show.php'; ?>
+
+  <!-- COMMENTS LIST -->
+    <?php
+      include_once '../app/controleurs/commentsControleur.php';
+      \App\Controleurs\CommentsControleur\indexByPostIdAction($connexion, $post['id']);
+     ?>

@@ -3,6 +3,7 @@
   ./app/vues/posts/show.php
   Variables disponibles :
     - $post: ARRAY(id, title, created_at, resume, image, content, author_id, categorie_id)
+    - $author: ARRAY(id, firstname, lastname, biography, image)
  */
  ?>
  <p class="mb-5">
@@ -15,8 +16,11 @@
    <?php echo $post['content']; ?>
  </div>
 
- <!-- TAGS LIST -->
+  <!-- TAGS LIST -->
     <?php
       include_once '../app/controleurs/tagsControleur.php';
       \App\Controleurs\TagsControleur\indexByPostIdAction($connexion, $post['id']);
      ?>
+
+  <!-- AUTHOR DETAILS -->
+    <?php include '../app/vues/authors/show.php'; ?>

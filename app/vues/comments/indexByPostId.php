@@ -24,4 +24,7 @@
 
    </ul>
    <!-- END comment-list -->
+
+   <?php include '../app/vues/comments/_addForm.php'; ?>
+
  </div>

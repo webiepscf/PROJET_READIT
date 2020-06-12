@@ -3,6 +3,7 @@
   ./app/vues/comments/indexByPostId.php
   Variables disponibles :
     - $comments: ARRAY(ARRAY(id, pseudo, content, created_at, post_id))
+    - $postId
  */
  ?>
  <div class="pt-5 mt-5">
